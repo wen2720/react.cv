@@ -1,35 +1,66 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { MainCol, SidePlane } from "./components";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App: React.FC = () => (
+  <div className="flex h-screen w-full">
+    {/* Left Side plane (3/8 of the screen) */}
+    <aside className="w-[33%] bg-transparent p-6 h-screen overflow-y-auto z-10">
+      <SidePlane/>
+    </aside>
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
+    {/* Main Content Area (5/8 of the screen) */}
+    <main className="w-[67%] bg-gray-100 p-6">
+      <MainCol/>
+    </main>
+  </div>
+)
 export default App
+// import { useState } from 'react'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
+// import './App.css'
+
+// function App() {
+//   const [count, setCount] = useState(0)
+
+//   return (
+//     <>
+//       <div>
+//         <a href="https://vite.dev" target="_blank">
+//           <img src={viteLogo} className="logo" alt="Vite logo" />
+//         </a>
+//         <a href="https://react.dev" target="_blank">
+//           <img src={reactLogo} className="logo react" alt="React logo" />
+//         </a>
+//       </div>
+//       <h1>Vite + React</h1>
+//       <div className="card">
+//         <button onClick={() => setCount((count) => count + 1)}>
+//           count is {count}
+//         </button>
+//         <p>
+//           Edit <code>src/App.tsx</code> and save to test HMR
+//         </p>
+//       </div>
+//       <p className="read-the-docs">
+//         Click on the Vite and React logos to learn more
+//       </p>
+//     </>
+//   )
+// }
+
+// import { MainCol, SidePlane } from './components'
+// const App: React.FC = () => (
+//   <div className="flex h-screen w-full">
+//     {/* Left Side plane (3/8 of the screen) */}
+//     <aside className="w-[33%] bg-zinc-800 p-6 h-screen overflow-y-auto">
+//       <SidePlane/>
+//     </aside>
+
+//     {/* Main Content Area (5/8 of the screen) */}
+//     <main className="w-[67%] bg-gray-100 p-6">
+//       <MainCol/>
+//     </main>
+//   </div>
+// )
+
+// export default App
