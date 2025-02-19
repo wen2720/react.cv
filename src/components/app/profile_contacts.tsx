@@ -1,22 +1,27 @@
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa';
 import { IoMdInformationCircleOutline } from "react-icons/io";
-import { Contacts } from "@/types/ProfileTypes";
-import ColorBox from "@/components/color_box";
-import IconLabel from "@/components/icon_label";
+import { ColorBox, type IconText , IconLabel } from "@/components";
 
-const contact_exp: Contacts = [
-	{
+type Contact = {
+		title?: IconText
+		contacts?: IconText[]
+}
+
+const ProfileContact: React.FC<Contact> = ({
+	title = {
 		icon: IoMdInformationCircleOutline, // React component for LinkedIn icon
 		id: "Contact"
 	},
-	[
+	contacts = [
 		{
 			icon: FaLinkedin, // React component for LinkedIn icon
-			id: "linkedin.com/in/profile-wenhao-0727/"
+			id: "linkedin.com/in/profile-wenhao-0727/",
+			link: "https://linkedin.com/in/profile-wenhao-0727/"
 		},
 		{
 			icon: FaGithub, // React component for GitHub icon
-			id: "github.com/wen2720"
+			id: "github.com/wen2720",
+			link: "https://github.com/wen2720/"
 		},
 		{
 			icon: FaEnvelope, // React component for Email icon
@@ -27,25 +32,19 @@ const contact_exp: Contacts = [
 			id: "53776999"
 		}
 	]
-];
-
-const ProfileContact: React.FC = () => (
+}) => (
 	/* React.Fragment allows you to return multiple elements without introducing additional DOM elements */
 	<>
 		{/* Bar */}
-		<ColorBox icon={contact_exp[0].icon} id={contact_exp[0].id}></ColorBox>
+		<ColorBox icon={title.icon} id={title.id} />
 
 		<div className="p-4">
-			{contact_exp[1].map((e,i) =>
-				
+			{contacts.map((e,i) =>
 				(
 					<IconLabel 
 						key={e.id}
 						theme_font={{ fontsize: i === 0 ? "text-xs" : "text-sm" }} 
-						icon_label={{
-							icon: e.icon,
-							id: e.id
-						}}
+						icon_label={{ icon: e.icon, id: e.id, link:e.link }}
 					/>
 				) 
 			)}

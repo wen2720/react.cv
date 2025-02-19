@@ -3,8 +3,15 @@
 	The icon, font are change able to show differently.
 	The styles can also be develop for further reqirement.
 */
-import { IconText } from "@/types/ProfileTypes"
-import { TextTheme } from "@/types/Theme"
+import { IconText } from "@/components/color_box"
+import clsx from "clsx"
+
+interface TextTheme{
+	font?: string
+	bold?: string 
+	fontsize?: string
+}
+
 
 interface ALabel {
 	theme_font: TextTheme
@@ -13,7 +20,7 @@ interface ALabel {
 
 const IconLabel: React.FC<ALabel> = ({
 	theme_font: {bold, fontsize},
-	icon_label: {icon:Icon, id}
+	icon_label: {icon:Icon, id, link}
 }) => (
 	<div className="flex items-center">
 		{/* Icon: Takes 1/5 of the space */}
@@ -23,7 +30,14 @@ const IconLabel: React.FC<ALabel> = ({
 
 		{/* Label: Takes the remaining 2/5 of the space */}
 		<div className="w-2/5 pl-4">
-			<span className={`text-lg ${bold} ${fontsize} text-white`}>{id}</span>
+		{
+			<p className={clsx("text-lg text-white", bold, fontsize)}>{
+				link === undefined?	
+				id
+				:
+				<a className={'text-blue-600'} href={`${link}`}>{id}</a>
+			}</p>
+		}
 		</div>
 	</div>
 )

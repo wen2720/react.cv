@@ -6,3 +6,5 @@ Knowledge check --'export'
 2. export type export interface doesn't include the type during runtime.
 
 3. export default doesn't require curly bracket for importing them.
+
+4. Use clsx function for construct the parameterized values for className.
