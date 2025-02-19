@@ -59,8 +59,8 @@ const ProfileEducation: React.FC<PorfileWorked> = ({
 			<></>
 		)
 	} else {
-		let show_events = events.length > 1
-		let first_event = events[events.length-1]
+		const show_events = events.length > 1
+		const first_event = events[events.length-1]
 		return (
 			<>
 				<ColorBox icon={FaSchool} id={title} />
