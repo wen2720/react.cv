@@ -15,7 +15,7 @@ interface CvSide {
 }
 
 // React component
-const OneProfile: React.FC<CvSide> = ({ 
+const LeftColumn: React.FC<CvSide> = ({ 
   img_src=profile_image, 
   name = "Wenhao Li", 
   hash_tags = ["#Computer Science", "#Software Engineer", "#Full-stack developer"],
@@ -57,4 +57,4 @@ const OneProfile: React.FC<CvSide> = ({
   );
 };
 
-export default OneProfile;
+export default LeftColumn;
