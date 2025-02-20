@@ -4,9 +4,6 @@ on:
   pull_request:
     branches:
       - 'dev'
-  pull_request_target:
-    types:
-      - closed
 
 jobs:
   ci:
@@ -60,7 +57,7 @@ jobs:
           git checkout gh-io
 
       - name: Remove Old Files
-        run: rm -rf ./*
+        run: git rm -rf ./*
 
       - name: Download Build Artifacts
         uses: actions/download-artifact@v4
