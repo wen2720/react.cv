@@ -11,5 +11,4 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'), // Alias '@' to 'src' folder
     },
   },
-  base: "/react.cv/"
 })
