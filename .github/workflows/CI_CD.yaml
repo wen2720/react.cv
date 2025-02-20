@@ -4,15 +4,9 @@ on:
   pull_request:
     branches:
       - 'dev'
-  push:
-    branches:
-      - 'dev'
-  # pull_request_target:
-  #   types:
-  #     - closed
 
 jobs:
-  ci:
+  cicd:
     name: Continuously intergrate to dev branch
     runs-on: ubuntu-latest
   
@@ -37,53 +31,27 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Upload Build Artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-output
-          path: dist/
-
-  cd:
-    name: Continuously deploy to github.io
-    needs: ci
-    if: github.event_name == 'push' && github.ref == 'refs/heads/dev'
-    #if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'dev'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Setup Git
+      - name: Deploy to gh-io branch
         run: |
-          git config --global user.name "github-actions[bot]"
+          git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-      - name: Switch to gh-io Branch
+      - name: Checkout gh-io branch
         run: |
           git fetch origin gh-io || git checkout --orphan gh-io
           git checkout gh-io
 
-      - name: Remove Old Files
-        run: rm -rf ./*
+      - name: Remove all files except .git
+        run: find . -mindepth 1 -maxdepth 1 ! -name 'dist' ! -name '.git' -exec rm -rf {} +
 
-      - name: Download Build Artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: dist-files
-          path: dist/
-
-      - name: Copy Dist to Root
+      - name: Copy only necessary files from dist/
         run: |
-          mv dist/* ./
+          mv dist/* .
           rm -rf dist
 
-      - name: Commit & Push Changes
-        run: |
+      - name: Add and commit changes
+        run: |        
           git add .
-          git commit -m "Deploy from dev branch"
-          git push origin gh-io 
-
-      - name: Delete Build Artifacts
-        uses: geekyeggo/delete-artifact@v5
-        with:
-          name: build-output
+          git commit -m "Deploy latest build to gh-io" 
+          git push origin gh-io
+  
