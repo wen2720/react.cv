@@ -15,11 +15,11 @@ const ProfileWorked: React.FC<PorfileWorked> = ({
 			[
 				{
 					project: "Dangdi web app",
-					frameworks: "Vue.js, Docker, Sails.js, MySql, Docker, CI/CD and AWS"
+					frameworks: "Vue.js, Sails.js, MySql, Docker, CI/CD and AWS"
 				},
 				{
 					project: "Dangdi mobile app",
-					frameworks: "Flutter, FlutterFlow, Docker, CI/CD, and App store Connect, Google Play Console"
+					frameworks: "Flutter, FlutterFlow, Docker, CI/CD, App store Connect and Google Play Console"
 				},
 			]
 		},
