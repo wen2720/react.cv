@@ -10,12 +10,12 @@ interface CvContent {
   font_color?: string
 }
 
-const MainCol: React.FC<CvContent> = ({ 
+const RightColumn: React.FC<CvContent> = ({ 
   font_style = "font-serif",
   font_color = "text-white"
 }) => {
   return (
-    <div className={clsx("flex-col p-6 m-6 rounded-lg", font_style, font_color )}>
+    <div className={clsx("flex-col p-6 rounded-lg", font_style, font_color )}>
       <AboutProfile/>
       <ProfileEducation/>
       <ProfileWorked/>
@@ -23,5 +23,5 @@ const MainCol: React.FC<CvContent> = ({
   );
 };
 
-export default MainCol;
+export default RightColumn;
 
