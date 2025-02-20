@@ -55,6 +55,6 @@ jobs:
       - name: Add and commit changes
         run: |        
           git add .
-          git commit -m "Deploy latest build to gh-io" 
+          git commit -am "Deploy built files to gh-io branch" || echo "No changes to commit"
           git push origin gh-io
   
