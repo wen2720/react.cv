@@ -16,7 +16,7 @@ interface CvSide {
 
 // React component
 const OneProfile: React.FC<CvSide> = ({ 
-  img_src="/src/assets/IMG5866-modified1.png", 
+  img_src="/IMG5866-modified1.png", 
   name = "Wenhao Li", 
   hash_tags = ["#Computer Science", "#Software Engineer", "#Full-stack developer"],
   font_style = "font-serif",
