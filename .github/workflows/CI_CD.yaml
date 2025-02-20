@@ -31,10 +31,10 @@ jobs:
       - name: Build project
         run: npm run build
 
-      # - name: Deploy to gh-io branch
-      #   run: |
-      #     git config --global user.name "github-actions"
-      #     git config --global user.email "github-actions@github.com"
+      - name: Deploy to gh-io branch
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Checkout gh-io branch
         run: |
