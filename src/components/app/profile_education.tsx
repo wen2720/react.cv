@@ -17,6 +17,7 @@ const ProfileEducation: React.FC<PorfileWorked> = ({
 				{
 					project: "",
 					courses: "Deep learning and MLOps",
+					GPA: "10",
 					models: "FFNN, CNN, GNN, MPNN and PaiNN",
 					frameworks: "Python, Pytorch, HPC and Google Cloud"
 				},
@@ -28,7 +29,8 @@ const ProfileEducation: React.FC<PorfileWorked> = ({
 			[
 				{
 					project: "",
-					frameworks: ""
+					frameworks: "",
+					GPA: "7.12"
 				},
 			]
 		},
@@ -48,7 +50,8 @@ const ProfileEducation: React.FC<PorfileWorked> = ({
 			[
 				{
 					project: "",
-					frameworks: ""
+					frameworks: "",
+					GPA: "7.82" 
 				},
 			]
 		},
