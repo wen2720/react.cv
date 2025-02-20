@@ -1,4 +1,4 @@
-name: "Run CI"
+name: CI/CD Pipeline
 
 on:
   pull_request:
@@ -9,7 +9,8 @@ on:
       - closed
 
 jobs:
-  ci: 
+  ci:
+    name: Continuously intergrate to dev branch
     runs-on: ubuntu-latest
   
     steps:
@@ -22,6 +23,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm install
@@ -32,8 +34,14 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: dist/
+
   cd:
-    name: CD - Deploy to gh-io
+    name: Continuously deploy to github.io
     needs: ci
     if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'dev'
     runs-on: ubuntu-latest
@@ -54,11 +62,24 @@ jobs:
       - name: Remove Old Files
         run: rm -rf ./*
 
-      - name: Copy Build Files
-        run: cp -r dist/* ./
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: dist-files
+          path: dist/
+
+      - name: Copy Dist to Root
+        run: |
+          mv dist/* ./
+          rm -rf dist
 
       - name: Commit & Push Changes
         run: |
           git add .
           git commit -m "Deploy from dev branch"
           git push origin gh-io 
+
+      - name: Delete Build Artifacts
+        uses: geekyeggo/delete-artifact@v5
+        with:
+          name: build-output
