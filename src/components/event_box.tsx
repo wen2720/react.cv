@@ -32,11 +32,17 @@ export const EventBox: React.FC<WorkExp> = ({
 }) => (
   <>
     {/* Time Point */}
-    <div className={clsx("-left-[7px] w-4 h-4 bg-white rounded-full border-4 border-black absolute", start ? "top-10" : "top-0")}></div>
+    <div className={clsx("-left-[7px] w-4 h-4 rounded-full absolute", start ? "top-10" : "top-0")}
+      style={{ backgroundColor: 'rgba(255, 255, 255, 1)', borderColor: 'rgba(0, 0, 0, 1)', 
+        borderWidth: '3px', borderStyle: 'solid', 
+      }}
+    ></div>
     
       
     {/* Event Content */}
-    <div className="ml-6 mt-2 bg-gray-100 p-4 rounded-lg shadow-md text-black">
+    <div className="ml-6 mt-2 p-4 rounded-lg shadow-md text-black"
+      style={{ backgroundColor: 'rgba(243, 244, 246, 1)' }}
+    >
       <span className="text-sm">{date}</span>
       <h3 className="text-lg font-bold">{title}</h3>        
       {projects?.map((e) =>(
