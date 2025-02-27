@@ -1,11 +1,21 @@
 import clsx from "clsx"
+import React from "react"
+import LinkText from "./link_text"
 
 interface WorkProject {
-  project: string
-  frameworks: string
+  project?: {
+    id: string
+    link?: string
+  }
+  frameworks?: string
   courses?: string
-  link?:string
+  GPA?: string
   model?:string
+  link?:string
+  thesis?: {
+    id: string
+    link: string
+  }
 }
 export interface WorkExp {
   date: string
@@ -30,16 +40,21 @@ export const EventBox: React.FC<WorkExp> = ({
       <span className="text-sm">{date}</span>
       <h3 className="text-lg font-bold">{title}</h3>        
       {projects?.map((e) =>(
-        <div key={e.project}>
+        <React.Fragment key={date+title+e.project?.id+e.thesis?.id}>
           { 
             Object.entries(e).map(([a,b]) =>(
-              b !== "" && 
               <p key={a}>
-                <span key={b}>{a}:</span> {b}
+                {a}:&nbsp;
+                {
+                  typeof(b) !== "object" ?
+                  b
+                  :
+                  <LinkText id={b.id} link={b.link}/>
+                } 
               </p>
             )) 
           }
-        </div>
+        </React.Fragment>
       ))}
     </div>
   </>
