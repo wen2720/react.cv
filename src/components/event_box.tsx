@@ -36,7 +36,9 @@ export const EventBox: React.FC<WorkExp> = ({
     
       
     {/* Event Content */}
-    <div className="ml-6 mt-2 bg-gray-100 bg-opacity-100 p-4 rounded-lg shadow-md text-black">
+    <div className="ml-6 mt-2 p-4 rounded-lg shadow-md text-black"
+      style={{ backgroundColor: '#f3f4f6', opacity: 1 }}
+    >
       <span className="text-sm">{date}</span>
       <h3 className="text-lg font-bold">{title}</h3>        
       {projects?.map((e) =>(
