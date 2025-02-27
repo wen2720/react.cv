@@ -5,6 +5,7 @@
 */
 import { IconText } from "@/components/color_box"
 import clsx from "clsx"
+import LinkText from "./link_text"
 
 interface TextTheme{
 	font?: string
@@ -29,15 +30,8 @@ const IconLabel: React.FC<ALabel> = ({
 		</div>
 
 		{/* Label: Takes the remaining 2/5 of the space */}
-		<div className="w-2/5 pl-4">
-		{
-			<p className={clsx("text-lg text-white", bold, fontsize)}>{
-				link === undefined?	
-				id
-				:
-				<a className={'text-blue-600'} href={`${link}`}>{id}</a>
-			}</p>
-		}
+		<div className={clsx("w-2/5 pl-4 text-lg text-white", bold, fontsize)}>
+			<LinkText id={id} link={link}/>
 		</div>
 	</div>
 )

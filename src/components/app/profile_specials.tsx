@@ -11,7 +11,7 @@ const ProfileSpecials: React.FC<SpecialSkills> = ({
 		icon: FaBook,
 		id: "Specialization"
 	},
-	skills = ["MLOps", "HPC", "Android App", "iOS App", "Micro-service", "Docker", "CI/CD", "Kubenetes", "React framework", "Phoenix framework", "Flutter framework", "Sails framework", "Vue framework", "Data Security and Privacy", "Communication protocols", "Data Structure", "Functional Programming", "Context-free grammar", "OO programming"]	
+	skills = ["MLOps", "HPC", "Android App", "iOS App", "Web App", "Micro-service", "CI/CD", "Docker", "Data Security and Privacy", "Communication protocols", "Data Science", "Functional Programming", "Context-free grammar", "OO Programming"]	
 }) => (
 	<>
 		<ColorBox icon={title.icon} id={title.id}></ColorBox>

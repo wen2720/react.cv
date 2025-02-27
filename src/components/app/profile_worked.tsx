@@ -14,11 +14,11 @@ const ProfileWorked: React.FC<PorfileWorked> = ({
 			projects:
 			[
 				{
-					project: "Dangdi web app",
+					project: { id: "Dangdi Web App", link: "https://dangdi.life/" },
 					frameworks: "Vue.js, Sails.js, MySql, Docker, CI/CD and AWS"
 				},
 				{
-					project: "Dangdi mobile app",
+					project:  { id: "Dangdi Mobile App" },
 					frameworks: "Flutter, FlutterFlow, Docker, CI/CD, App store Connect and Google Play Console"
 				},
 			]
@@ -27,7 +27,7 @@ const ProfileWorked: React.FC<PorfileWorked> = ({
 			projects: 
 			[
 				{
-					project: "Stock trading API",
+					project: { id: "Stock trading API" },
 					frameworks: "Node.js, Firebase and Google Cloud"
 				},
 			]
@@ -36,7 +36,7 @@ const ProfileWorked: React.FC<PorfileWorked> = ({
 			projects: 
 			[
 				{
-					project: "System Integaration",
+					project: { id: "System Integaration" },
 					frameworks: "UML, Agile and Scurm "
 				},
 			]
@@ -45,7 +45,7 @@ const ProfileWorked: React.FC<PorfileWorked> = ({
 			projects: 
 			[
 				{
-					project: "FPGA Scan Test",
+					project: { id: "FPGA Scan Test" },
 					frameworks: "VHDL and FPGA "
 				},
 			]
@@ -54,7 +54,7 @@ const ProfileWorked: React.FC<PorfileWorked> = ({
 			projects: 
 			[
 				{
-					project: "Online library",
+					project: { id: "Tencent Library" },
 					frameworks: "Java and Android"
 				},
 			]
