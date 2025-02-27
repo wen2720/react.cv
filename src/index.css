@@ -1,10 +1,16 @@
 /* tailwind css */
 @import "tailwindcss";
 
+/* Swiper */
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/scrollbar';
+
 /* css */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --swiper-navigation-color: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
