@@ -22,7 +22,7 @@ export const ColorBox: React.FC<IconText> = (
 	}
 ) => (
 	<>
-		<div className="mt-4 p-4 rounded-md shadow-lg relative overflow-hidden">
+		<div className="mt-4 p-4 rounded-md shadow-lg relative overflow-visible">
 			{/* Fading top edge */}
 			<div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-b from-white via-transparent to-transparent"></div>
 
