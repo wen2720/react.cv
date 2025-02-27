@@ -11,7 +11,7 @@ const LinkText:React.FC<TextLink> = (
         link === undefined?	
         id
         :
-        <a className={'text-blue-600'} href={link}>{id}</a>
+        <a style={{ color: 'rgba(37, 99, 235, 1)' }} href={link}>{id}</a>
       }
   </>
 )

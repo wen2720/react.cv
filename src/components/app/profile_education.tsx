@@ -11,25 +11,27 @@ const ProfileEducation: React.FC<PorfileWorked> = ({
 	title = "Educations",
 	events = [
 		{ 
-			date: "September 2024 ~ January 2025 in DTU", title: "Single Course", 
+			date: "September 2024 ~ January 2025 in DTU", 
+			title: "Single Course", 
 			projects:
 			[
 				{
 					courses: "Deep learning and MLOps",
 					GPA: "10",
 					models: "FFNN, CNN, GNN, MPNN and PaiNN",
-					frameworks: "Python, Pytorch, HPC and Google Cloud"
+					frameworks: "Python, Pytorch, Docker, HPC and Google Cloud"
 				},
 			]
 		},
 		{ 
-			date: "January 2022 in DTU", title: "MSc in Computer Science Engineering", 
+			date: "January 2022 in DTU", 
+			title: "Master of Science in Computer Science Engineering", 
 			projects:
 			[
 				{
 					GPA: "7.12",
 					thesis: {
-						id: "Formal modeling and analysis of an eHealth Protocol",
+						id: "Formal modeling and analysis of an eHealth protocol",
 						link: "https://github.com/wen0727/Job-Application/blob/main/Master-Thesis-Wen.pdf"
 					},
 					frameworks: "(\u03B1,\u03B2)-privacy, context-free grammar and first-order logic"
@@ -41,7 +43,12 @@ const ProfileEducation: React.FC<PorfileWorked> = ({
 			projects:
 			[
 				{
-					GPA: "7.82" 
+					GPA: "7.82",
+					project: {
+						id: "Line following robot",
+						link: "https://www.youtube.com/watch?v=s0B8l055Zj0"
+					},
+					frameworks: "embedded C, PCB and Linear Control Theory"
 				},
 			]
 		},

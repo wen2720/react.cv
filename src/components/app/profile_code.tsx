@@ -23,7 +23,7 @@ const ProfileCode: React.FC<ProfileCode> = ({
 		{ language: "C#", framework: [".NET"] }, 
 		{ language: "JavaScript", framework: ["Sails", "Node"] },
 		{ language: "HTML" },
-		{ language: "CSS", framework: ["TailWind"] },
+		{ language: "CSS", framework: ["Tailwind"] },
 		{ language: "Shell Script" },
 		{ language: "C++" },
 		{ language: "Java", framework: ["Spring"] },
