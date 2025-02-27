@@ -32,7 +32,7 @@ export const EventBox: React.FC<WorkExp> = ({
 }) => (
   <>
     {/* Time Point */}
-    <div className={clsx("-left-[7px] w-4 h-4 bg-white rounded-full border-4 absolute", start ? "top-10" : "top-0")}
+    <div className={clsx("-left-[7px] w-4 h-4 rounded-full border-4 absolute", start ? "top-10" : "top-0")}
       style={{ backgroundColor: 'rgba(255, 255, 255, 1)', borderColor: 'rgba(0, 0, 0, 1)', }}
     ></div>
     
