@@ -9,7 +9,7 @@ const LinkText:React.FC<TextLink> = (
   <>  
       {
         link === undefined?	
-        <p>{id}</p>
+        id
         :
         <a className={"text-blue-600"} href={link}>{id}</a>
       }
