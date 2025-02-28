@@ -14,7 +14,7 @@ interface WorkProject {
   link?:string
   thesis?: {
     id: string
-    link: string
+    link?: string
   }
 }
 export interface WorkExp {
