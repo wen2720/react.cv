@@ -30,7 +30,7 @@ const IconLabel: React.FC<ALabel> = ({
 		</div>
 
 		{/* Label: Takes the remaining 2/5 of the space */}
-		<div className={clsx("w-2/5 pl-4 text-lg text-white", bold, fontsize)}>
+		<div className={clsx("pl-4 text-lg text-white", bold, fontsize)}>
 			<LinkText id={id} link={link}/>
 		</div>
 	</div>
