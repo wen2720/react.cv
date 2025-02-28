@@ -10,7 +10,7 @@ interface PorfileWorked{
 const ProfileWorked: React.FC<PorfileWorked> = ({
 	title = "Working Experiences",
 	events = [
-		{ date: "October-2022 ~ July-2024 in Sinolab ApS", title: "Full-stack developer", 
+		{ date: "October-2022 ~ July-2024 at Sinolab ApS", title: "Full-stack developer", 
 			projects:
 			[
 				{
@@ -23,7 +23,7 @@ const ProfileWorked: React.FC<PorfileWorked> = ({
 				},
 			]
 		},
-		{ date: "July-2022 ~ June-2022 in make!mpact ApS", title: "Back-end development internship", 
+		{ date: "July-2022 ~ June-2022 at make!mpact ApS", title: "Back-end development internship", 
 			projects: 
 			[
 				{
@@ -32,7 +32,7 @@ const ProfileWorked: React.FC<PorfileWorked> = ({
 				},
 			]
 		},
-		{ date: "Feburary-2018 ~ May-2019 in make!mpact ApS", title: "DTU Teaching Assistant", 
+		{ date: "Feburary-2018 ~ May-2019 at DTU", title: "DTU Teaching Assistant", 
 			projects: 
 			[
 				{
@@ -41,7 +41,7 @@ const ProfileWorked: React.FC<PorfileWorked> = ({
 				},
 			]
 		},
-		{ date: "January-2016 ~ June-2016 in Merus Audio", title: "DTU Bachelor Thesis", 
+		{ date: "January-2016 ~ June-2016 at Merus Audio", title: "DTU Bachelor Thesis", 
 			projects: 
 			[
 				{
