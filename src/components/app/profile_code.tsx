@@ -19,8 +19,10 @@ const ProfileCode: React.FC<ProfileCode> = ({
 	skills = [
 		{ language: "Python", framework: ["CookieCutter"] },
 		{ language: "Elixr", framework: ["Phoenix"] },
+		{ language: "Dart", framework: ["Flutter"] },
 		{ language: "TypeScript", framework: ["Next", "React", "Vue"] },
 		{ language: "C#", framework: [".NET"] }, 
+		{ language: "F#"}, 
 		{ language: "JavaScript", framework: ["Sails", "Node"] },
 		{ language: "HTML" },
 		{ language: "CSS", framework: ["Tailwind"] },

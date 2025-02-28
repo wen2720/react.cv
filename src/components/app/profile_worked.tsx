@@ -45,7 +45,7 @@ const ProfileWorked: React.FC<PorfileWorked> = ({
 			projects: 
 			[
 				{
-					project: { id: "FPGA Scan Test" },
+					thesis: { id: "FPGA Scan Test" },
 					frameworks: "VHDL and FPGA "
 				},
 			]
