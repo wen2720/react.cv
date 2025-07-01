@@ -10,6 +10,22 @@ interface PorfileWorked{
 const ProfileWorked: React.FC<PorfileWorked> = ({
 	title = "Working Experiences",
 	events = [
+		{ date: "May-2025 ~ now at CostBits ApS", title: "Back-end Developer", 
+			projects:
+			[
+				{
+					project: { id: "Dangdi Web App", link: "https://costbits.com/" },
+					frameworks: "Git, .NET, C#, PostgreSql, CI/CD, Docker, React DigitalOcean",
+					tasks: [
+						"⊠ Design & imeplement Backend CRUD, Unit testing",
+						"⊠ Provision, backing-up and partitioning Database",
+						"⊠ Deploy production level Front and Backend application deployment",
+						"⊠ Automate version patching, container shipping for all staged software",
+						"⊠ Design & imeplement Financial service"
+					]
+				},
+			]
+		},
 		{ date: "October-2022 ~ July-2024 at Sinolab ApS", title: "Full-stack developer", 
 			projects:
 			[
@@ -19,7 +35,14 @@ const ProfileWorked: React.FC<PorfileWorked> = ({
 				},
 				{
 					project:  { id: "Dangdi Mobile App" },
-					frameworks: "Flutter, FlutterFlow, Docker, CI/CD, App store Connect and Google Play Console"
+					frameworks: "Flutter, FlutterFlow, Docker, CI/CD, App store Connect and Google Play Console",
+					tasks: [
+						"⊠ Design & imeplement Backend CRUD, Unit testing",
+						"⊠ Design & imeplement Frontend UI and UX",
+						"⊠ Apply 3rd Party services, e.g., OAuth Protocol Map Services",
+						"⊠ Container shipping for all staged software",
+						"⊠ Design & imeplement CMS and User service"
+					]
 				},
 			]
 		},
@@ -28,7 +51,10 @@ const ProfileWorked: React.FC<PorfileWorked> = ({
 			[
 				{
 					project: { id: "Stock trading API" },
-					frameworks: "Node.js, Firebase and Google Cloud"
+					frameworks: "Node.js, Firebase and Google Cloud",
+					tasks: [
+						"⊠ Design & imeplement Backend CRUD, Unit testing"
+					]
 				},
 			]
 		},
@@ -37,28 +63,32 @@ const ProfileWorked: React.FC<PorfileWorked> = ({
 			[
 				{
 					project: { id: "System Integaration" },
-					frameworks: "UML, Agile and Scurm "
+					frameworks: "UML, Agile and Scurm ",
+					tasks: [
+						"⊠ Supervise students",
+						"⊠ Review assignments"
+					]
 				},
 			]
 		},
-		{ date: "January-2016 ~ June-2016 at Merus Audio", title: "DTU Bachelor Thesis", 
-			projects: 
-			[
-				{
-					thesis: { id: "FPGA Scan Test" },
-					frameworks: "VHDL and FPGA "
-				},
-			]
-		},
-		{ date: "January-2013 ~ June-2013 in Neusoft", title: "Android app testing internship", 
-			projects: 
-			[
-				{
-					project: { id: "Tencent Library" },
-					frameworks: "Java and Android"
-				},
-			]
-		}
+		// { date: "January-2016 ~ June-2016 at Merus Audio", title: "DTU Bachelor Thesis", 
+		// 	projects: 
+		// 	[
+		// 		{
+		// 			thesis: { id: "FPGA Scan Test" },
+		// 			frameworks: "VHDL and FPGA "
+		// 		},
+		// 	]
+		// },
+		// { date: "January-2013 ~ June-2013 in Neusoft", title: "Android app testing internship", 
+		// 	projects: 
+		// 	[
+		// 		{
+		// 			project: { id: "Tencent Library" },
+		// 			frameworks: "Java and Android"
+		// 		},
+		// 	]
+		// }
 	]
 }) =>{
 	if (events === null) {
