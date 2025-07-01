@@ -16,6 +16,7 @@ interface WorkProject {
     id: string
     link?: string
   }
+  tasks?: string[]
 }
 export interface WorkExp {
   date: string
@@ -49,6 +50,16 @@ export const EventBox: React.FC<WorkExp> = ({
         <React.Fragment key={date+title+e.project?.id+e.thesis?.id}>
           { 
             Object.entries(e).map(([a,b]) =>(
+              a === "tasks" && Array.isArray(b) ? 
+              
+              <div key={a}>{a}:
+                <ul className="list-none ml-4">
+                  {b.map((task, idx) => (
+                    <li key={idx}>{task}</li>
+                  ))}
+                </ul>
+              </div>
+              :
               <p key={a}>
                 {a}:&nbsp;
                 {
