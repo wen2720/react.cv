@@ -11,7 +11,7 @@ const ProfileEducation: React.FC<PorfileWorked> = ({
 	title = "Educations",
 	events = [
 		{ 
-			date: "September 2024 ~ January 2025 in DTU", 
+			date: "September 2024 ~ January 2025 at DTU", 
 			title: "Single Course", 
 			projects:
 			[
@@ -24,7 +24,7 @@ const ProfileEducation: React.FC<PorfileWorked> = ({
 			]
 		},
 		{ 
-			date: "September 2018 ~ December 2021 in DTU", 
+			date: "September 2018 ~ December 2021 at DTU", 
 			title: "Master of Science in Computer Science Engineering", 
 			projects:
 			[
@@ -39,7 +39,7 @@ const ProfileEducation: React.FC<PorfileWorked> = ({
 			]
 		},
 		{ 
-			date: "September 2013 ~ June 2016 in DTU", 
+			date: "September 2013 ~ June 2016 at DTU", 
 			title: "Bachelor Eletrical Engineering ", 
 			projects:
 			[
