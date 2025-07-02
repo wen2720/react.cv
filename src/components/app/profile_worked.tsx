@@ -31,7 +31,7 @@ const ProfileWorked: React.FC<PorfileWorked> = ({
 			[
 				{
 					project: { id: "Dangdi Web App", link: "https://dangdi.life/" },
-					frameworks: "Vue.js, Sails.js, MySql, Docker, CI/CD and AWS"
+					frameworks: "Vue.js, Sails.js, MySql, MongoDB, Docker, CI/CD and AWS"
 				},
 				{
 					project:  { id: "Dangdi Mobile App" },
