@@ -39,7 +39,7 @@ const ProfileWorked: React.FC<PorfileWorked> = ({
 					tasks: [
 						"⊠ Design & imeplement Backend CRUD, Unit testing",
 						"⊠ Design & imeplement Frontend UI and UX",
-						"⊠ Apply 3rd Party services, e.g., OAuth Protocol Map Services",
+						"⊠ Apply 3rd Party services, e.g., OAuth Protocol, Map Services",
 						"⊠ Container shipping for all staged software",
 						"⊠ Design & imeplement CMS and User service"
 					]
