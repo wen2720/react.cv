@@ -20,7 +20,7 @@ const ProfileWorked: React.FC<PorfileWorked> = ({
 						"⊠ Design & imeplement Backend CRUD, Unit testing",
 						"⊠ Provision, backing-up and partitioning Database",
 						"⊠ Deploy production level Front and Backend application deployment",
-						"⊠ Automate version patching, container shipping for all staged software",
+						"⊠Design & automate testing, container shipping, deployment, version patching and hot-fix workflows",
 						"⊠ Design & imeplement Financial service"
 					]
 				},
@@ -53,7 +53,8 @@ const ProfileWorked: React.FC<PorfileWorked> = ({
 					project: { id: "Stock trading API" },
 					frameworks: "Node.js, Firebase and Google Cloud",
 					tasks: [
-						"⊠ Design & imeplement Backend CRUD, Unit testing"
+						"⊠ Design & imeplement Backend CRUD, Unit testing",
+						"⊠ Design & imeplement financial service"
 					]
 				},
 			]
@@ -65,8 +66,7 @@ const ProfileWorked: React.FC<PorfileWorked> = ({
 					project: { id: "System Integaration" },
 					frameworks: "UML, Agile and Scurm ",
 					tasks: [
-						"⊠ Supervise students",
-						"⊠ Review assignments"
+						"⊠ Supervise students and Review assignments"
 					]
 				},
 			]
